@@ -52,62 +52,49 @@ Once you have the Docker Engine CE installed, pull to your machine the
 image for the tutorial with the command:
 
 ```bash
-docker pull bovulpes/qc-in2p3-tuto:test
+docker pull bovulpes/qc-in2p3-tuto:v01
 ```
 
-You can check it with the command:
+Create the working directory for this tutorial with the name "qctuto" somewhere in your favourite directory:
 
 ```bash
-docker images
+mkdir <your-favourite-directory>/qctuto
 ```
 
-Create the working directory for this tutorial with the name "qctuto" in
-your favourite directory:
+and define the environment variable:
 
 ```bash
-cd <your-favourite-directory>
-mkdir qctuto
+export QCTUTO_HOME=<your-favourite-directory>/qctuto
 ```
 
-then go there and clone the git repository:
+The next command creates a container named "qctuto" starting from the pulled
+image "bovulpes/qc-in2p3-tuto:v01", sets the home directory to the value 
+defined above and starts a "bash" shell:
 
 ```bash
-cd <your-favourite-directory>/qctuto
+docker run -itd --rm --name qctuto -v $QCTUTO_HOME:$QCTUTO_HOME --net=host bovulpes/qc-in2p3-tuto:v01 /bin/bash
+```
+
+With the next command you add inside the container a user/group having the same
+identity as your local account:
+
+```bash
+docker exec qctuto useradd -u $UID $USER
+```
+
+Now you can enter the container in an interactive session:
+
+```bash
+docker exec -it --user $USER -w $QCTUTO_HOME -e DISPLAY -e $XAUTHORITY qctuto /bin/bash
+```
+
+The support material is on git hub and you can get a copy of it with:
+
+```bash
 git clone https://github.com/bovulpes/tuto-qc
 ```
 
-The first step is to create a second image from the one pulled down as explained
-above, by adding a layer which provides the same user identification inside the
-docker container as in your local account. In order to do this, change to the
-directory "tuto-qc/docker" and replace in the file Dockerfile the <uid> and
-<gid> by the two values given by the Linux command "id". Change also the value
-of WORKDIR in Dockerfile and runx.sh according to the previous step.
-
-After doing this, execute the script:
-
-```bash
-./build.sh     
-```
-
-(be sure it has the executable flag set) or simply run the command:
-
-```bash
-docker build -t qctuto .     
-```
-(there is a point at the end!). Now you can launch a container from the
-"qctuto" image by executing the script:
-
-```bash
-./runx.sh     
-```
-(or simply run the command inside it) and you are inside the container,
-starting in the directory
-
-```bash
-<your-favourite-directory>/qctuto
-```
-
-If you have already cloned the git repository, go in the directory:
+Then go in the directory:
 
 ```bash
 cd tuto-qc/qpp-examples
@@ -141,8 +128,10 @@ command:
 xterm -s bash -fa 'Monospace' -fs 12 &
 ```
 
-Note: git is also available in the docker image, so you can clone the tutorial
-repository afterwards, from inside the container. Since you have the same user
-identification as on your local account, files will be accessible with the same
-rights from both sides.
+At the end of the work, close all terminal windows from the "qctuto" container
+and then kill the container with the command:
+
+```bash
+docker kill qctuto
+```
 
