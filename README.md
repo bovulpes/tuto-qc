@@ -85,8 +85,11 @@ docker exec qctuto useradd -u $UID $USER
 Now you can enter the container in an interactive session:
 
 ```bash
-docker exec -it --user $USER -w $QCTUTO_HOME -e DISPLAY -e $XAUTHORITY qctuto /bin/bash
+docker exec -it --user $USER -w $QCTUTO_HOME qctuto /bin/bash
 ```
+
+You can repeat the command in another terminal and open another session inside
+the container.
 
 The support material is on git hub and you can get a copy of it with:
 
@@ -121,17 +124,25 @@ This is the |0> state:
 0
 ```
 
-If you want to open several terminal windows from the container, use the
-command:
-
-```bash
-xterm -s bash -fa 'Monospace' -fs 12 &
-```
-
 At the end of the work, close all terminal windows from the "qctuto" container
 and then kill the container with the command:
 
 ```bash
 docker kill qctuto
+```
+
+## The simulators
+
+A comprehensive list of (free) simulators can be found here:
+
+```bash
+https://quantiki.org/wiki/list-qc-simulators
+```
+
+For this tutorial we will use:
+
+```bash
+Quantum++ (C++11)
+https://github.com/vsoftco/qpp
 ```
 
