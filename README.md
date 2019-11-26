@@ -72,7 +72,7 @@ image "bovulpes/qc-in2p3-tuto:v01", sets the home directory to the value
 defined above and starts a "bash" shell:
 
 ```bash
-docker run -itd --rm --name qctuto -v $QCTUTO_HOME:$QCTUTO_HOME --net=host bovulpes/qc-in2p3-tuto:v01 /bin/bash
+docker run -itd --name qctuto -v $QCTUTO_HOME:$QCTUTO_HOME --net=host bovulpes/qc-in2p3-tuto:v01 /bin/bash
 ```
 
 With the next command you add inside the container a user/group having the same
