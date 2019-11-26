@@ -88,6 +88,8 @@ Now you can enter the container in an interactive session:
 docker exec -it --user $USER -w $QCTUTO_HOME qctuto /bin/bash
 ```
 
+Note: if you get the error about missing option "-w", make sure that the API version of your docker installation is >= 1.35 by checking the output of the command "docker version". If it is not the case, update you docker to a higher version.
+
 You can repeat the command in another terminal and open another session inside
 the container.
 
