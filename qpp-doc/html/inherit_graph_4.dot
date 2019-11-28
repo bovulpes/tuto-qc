@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="qpp::internal::EqualSame\lSizeStringDits",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structqpp_1_1internal_1_1_equal_same_size_string_dits.html",tooltip="Functor for comparing strings of numbers of equal sizes in lexicographical order. Establishes a stric..."];
+}

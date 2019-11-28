@@ -41,5 +41,21 @@ int main() {
   // probability of obtaining the measurement results x and z
   double p = std::get<PROB>(results);
   std::cout << ", obtained with probability: " << p << '\n';
+
+  // the output state before correction
+  ket out_B = std::get<ST>(results);
+  std::cout << ">> Bob's state before correction:\n";
+  std::cout << disp(out_B) << '\n';
   
+  // perform the correction on B
+  out_B = powm(gt.Z, z) * powm(gt.X, x) * out_B;
+  std::cout << ">> Bob must apply the correction operator Z^" << z << " X^"
+	    << x << '\n';
+  
+  // display the output
+  std::cout << ">> Bob's final state (after correction):\n";
+  std::cout << disp(out_B) << '\n';
+  
+  // verification
+  std::cout << ">> Norm difference: " << norm(out_B - psi_a) << '\n';
 }

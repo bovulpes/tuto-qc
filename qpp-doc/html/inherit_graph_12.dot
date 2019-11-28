@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5 [label="true_type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="qpp::is_complex\< std\l::complex\< T \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structqpp_1_1is__complex_3_01std_1_1complex_3_01_t_01_4_01_4.html",tooltip="Checks whether the type is a complex number type, specialization for complex types. "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="qpp::is_iterable\< T,\l to_void\< decltype(std\l::declval\< T \>().begin\l()), decltype(std::declval\l\< T \>().end()), decltype(*\l(std::declval\< T \>().begin()))\> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structqpp_1_1is__iterable_3_01_t_00_01to__void_3_01decltype_07std_1_1declval_3_01_t_01_4_07_08_8a85a9c2c5a028e47768327c6329d9509.html",tooltip="Checks whether T is compatible with an STL-like iterable container, specialization for STL-like itera..."];
+}

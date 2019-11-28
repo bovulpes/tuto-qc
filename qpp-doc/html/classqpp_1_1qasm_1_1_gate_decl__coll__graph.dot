@@ -1,0 +1,29 @@
+digraph "qpp::qasm::GateDecl"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node4 [label="qpp::qasm::GateDecl",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="qpp::qasm::Decl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1qasm_1_1_decl.html",tooltip="Base class for openQASM declarations. "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="qpp::qasm::Statement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1qasm_1_1_statement.html",tooltip="Base class for openQASM statements. "];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="qpp::IDisplay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_i_display.html",tooltip="Abstract class (interface) that mandates the definition of virtual std::ostream& display(std::ostream..."];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" loc_" ,fontname="Helvetica"];
+  Node8 [label="qpp::qasm::Location",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1qasm_1_1_location.html",tooltip="Source location class. "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fname_" ,fontname="Helvetica"];
+  Node9 [label="std::string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node9 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id_" ,fontname="Helvetica"];
+  Node11 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" body_" ,fontname="Helvetica"];
+  Node11 [label="std::vector\< GatePtr \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node12 [label="std::unique_ptr\< T \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ptr" ,fontname="Helvetica"];
+  Node13 [label="T",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node14 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" c_params_\nq_params_" ,fontname="Helvetica"];
+  Node14 [label="std::vector\< ident \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+}

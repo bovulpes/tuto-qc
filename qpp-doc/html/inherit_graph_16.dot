@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="qpp::NoiseBase\< NoiseType\l::StateDependent \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_noise_base.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="qpp::QubitAmplitudeDamping\lNoise",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_qubit_amplitude_damping_noise.html",tooltip="Qubit amplitude damping noise, as described in Nielsen and Chuang. "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="qpp::QubitPhaseDampingNoise",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_qubit_phase_damping_noise.html",tooltip="Qubit phase damping noise, as described in Nielsen and Chuang. "];
+}

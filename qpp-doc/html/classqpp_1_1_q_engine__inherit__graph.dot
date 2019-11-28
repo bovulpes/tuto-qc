@@ -1,0 +1,12 @@
+digraph "qpp::QEngine"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="qpp::QEngine",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="qpp::IDisplay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_i_display.html",tooltip="Abstract class (interface) that mandates the definition of virtual std::ostream& display(std::ostream..."];
+  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="qpp::IJSON",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_i_j_s_o_n.html",tooltip="Abstract class (interface) that mandates the definition of very basic JSON serialization support..."];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="qpp::QNoisyEngine\<\l NoiseModel \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_q_noisy_engine.html",tooltip="Noisy quantum circuit engine, executes qpp::QCircuit. "];
+}

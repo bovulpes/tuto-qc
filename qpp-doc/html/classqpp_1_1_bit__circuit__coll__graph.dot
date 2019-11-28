@@ -1,0 +1,21 @@
+digraph "qpp::Bit_circuit"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node4 [label="qpp::Bit_circuit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="qpp::Dynamic_bitset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_dynamic__bitset.html",tooltip="Dynamic bitset class, allows the specification of the number of bits at runtime. "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="qpp::IDisplay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_i_display.html",tooltip="Abstract class (interface) that mandates the definition of virtual std::ostream& display(std::ostream..."];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" v_" ,fontname="Helvetica"];
+  Node7 [label="std::vector\< value\l_type \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="qpp::IJSON",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_i_j_s_o_n.html",tooltip="Abstract class (interface) that mandates the definition of very basic JSON serialization support..."];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" count_\ndepth_" ,fontname="Helvetica"];
+  Node9 [label="std::unordered_map\l\< std::string, idx \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" keys" ,fontname="Helvetica"];
+  Node10 [label="std::string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node11 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bFRED_\nbNOT_\nbtotal_\nbSWAP_\nbCNOT_\nbTOF_" ,fontname="Helvetica"];
+}

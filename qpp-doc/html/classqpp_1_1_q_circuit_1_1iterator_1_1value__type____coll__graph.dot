@@ -1,0 +1,44 @@
+digraph "qpp::QCircuit::iterator::value_type_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="qpp::QCircuit::iterator\l::value_type_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="qpp::IDisplay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_i_display.html",tooltip="Abstract class (interface) that mandates the definition of virtual std::ostream& display(std::ostream..."];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" measurements_ip_" ,fontname="Helvetica"];
+  Node4 [label="std::vector\< qpp::QCircuit\l::MeasureStep \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node5 [label="qpp::QCircuit::MeasureStep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structqpp_1_1_q_circuit_1_1_measure_step.html",tooltip="One step consisting only of measurements in the circuit. "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mats_hash_" ,fontname="Helvetica"];
+  Node6 [label="std::vector\< std::size_t \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" target_" ,fontname="Helvetica"];
+  Node7 [label="std::vector\< idx \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name_" ,fontname="Helvetica"];
+  Node8 [label="std::string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gates_ip_" ,fontname="Helvetica"];
+  Node10 [label="std::vector\< qpp::QCircuit\l::GateStep \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node11 [label="qpp::QCircuit::GateStep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structqpp_1_1_q_circuit_1_1_gate_step.html",tooltip="One step consisting only of gates/operators in the circuit. "];
+  Node7 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" target_\nshift_\nctrl_" ,fontname="Helvetica"];
+  Node8 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name_" ,fontname="Helvetica"];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" value_type_qc_" ,fontname="Helvetica"];
+  Node12 [label="qpp::QCircuit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_q_circuit.html",tooltip="Quantum circuit description. "];
+  Node3 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="qpp::IJSON",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classqpp_1_1_i_j_s_o_n.html",tooltip="Abstract class (interface) that mandates the definition of very basic JSON serialization support..."];
+  Node14 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" measurement_count_\ncount_" ,fontname="Helvetica"];
+  Node14 [label="std::unordered_map\l\< std::string, idx \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" keys" ,fontname="Helvetica"];
+  Node4 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" measurements_" ,fontname="Helvetica"];
+  Node10 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gates_" ,fontname="Helvetica"];
+  Node8 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name_" ,fontname="Helvetica"];
+  Node15 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cmat_hash_tbl_" ,fontname="Helvetica"];
+  Node15 [label="std::unordered_map\l\< std::size_t, cmat \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node16 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" measured_" ,fontname="Helvetica"];
+  Node16 [label="std::vector\< bool \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node17 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" step_types_" ,fontname="Helvetica"];
+  Node17 [label="std::vector\< StepType \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}
