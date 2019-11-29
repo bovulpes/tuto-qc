@@ -148,3 +148,80 @@ Quantum++ (C++11)
 https://github.com/vsoftco/qpp
 ```
 
+## Using the myQLM simulator from Atos Quantum Lab
+
+Below are the instructions on how to download and use the myQLM docker image
+for the workshop.
+
+The image once installed is around 2.5GB; its export file is about 950MB.
+ 
+1 – Retrieve the image
+(equivalent of docker pull if our image was published on docker.io)
+
+```bash
+~> sftp myqlm@doorway.bull.com
+
+myqlm@doorway.bull.com's password: ...see mail...
+
+Connected to doorway.bull.com.
+
+sftp> cd downloads
+
+sftp> get myqlm-runtime-0.0.5_latest.export
+
+Fetching…
+
+sftp> bye
+```
+
+Note: This can be done from any machines connected to Internet.
+ 
+2 – Import the image into your docker installation
+
+```bash
+~> zcat myqlm-runtime-0.0.5_latest.export | docker import - myqlm-runtime-0.0.5:latest
+```
+
+Note: One can use “docker images” to see the list of images
+ 
+3 – Instantiate a container from the image and connect to it
+
+```bash
+~> [sudo] docker run -ti -p 8011:8888 myqlm-runtime-0.0.5:latest /bin/bash -l
+```
+
+Notes:
+
+8011 here is an arbitrary port on the host side that will be mapped to the port 8888 inside the container (Jupyter server default port).
+
+From another window, one can use “docker ps” to see the container.
+       
+The myQLM wheels are already installed except for myqlm-simulators and are located at /var/myqlm/dist/0.0.5/atos/myqlm-0.0.5-atos/
+       
+There is a README file that explains how to install myQLM at /var/myqlm/dist/0.0.5/atos/README.md
+ 
+4 – Start a Jupyter server once inside the container
+ 
+```bash
+~> su – qatuser
+~> myqlm_notebook/launch_myqlm_notebook
+…
+```
+
+Copy/paste this URL into your browser when you connect for the first time,
+to login with a token:
+
+```bash
+http://0.0.0.0:8888/?token=f508e5b2659e107d02b9821fb8a604e9f7dd960dd2fb16f1
+```
+
+Note: You can also work in command line mode
+
+5 – Connect to the server from a browser
+
+```bash
+http://<localhost_or_host_ip>:8011
+```
+
+Note: Copy/paste the value of the token shown on the Jupyter console above
+
