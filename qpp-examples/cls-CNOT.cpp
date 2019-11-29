@@ -11,7 +11,7 @@ int main() {
   Dynamic_bitset bits{2};                             
 
   bool bval[2];
-  std::cout << "<< Enter the values of the 2 bits (0 or 1): \n";
+  std::cout << "<< Enter the values of the 2 bits (0 or 1, separated by a space): \n";
   std::cin >> bval[0] >> bval[1];
   
   bits.set(0, bval[0]); // control
